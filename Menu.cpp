@@ -955,10 +955,7 @@ namespace GladiatorMenu
 
 	void skinchangerTab()
 	{
-		ImGui::BeginChild("SKINCHANGER", ImVec2(0, 0), true);
-		{
-			ImGui::Text("Structs have to be updated to make skinchanger work again. To lazy atm for it.");
-			ImGui::Text("The structs that are needing an update: C_WeaponCSBase, C_AttributeManager, C_EconItemView inside Structs.hpp");
+		ImGui::BeginChild("SKINCHANGER", ImVec2(0, 0), true);	{
 
 			if (ImGui::Checkbox("Enabled##Skinchanger", &g_Options.skinchanger_enabled))
 				Skinchanger::Get().bForceFullUpdate = true;
